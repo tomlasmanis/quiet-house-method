@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Doorbell Rings. Your Dog Loses His Mind. Every. Single. Time. | The Quiet House Method</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5EFE2;
+    --cream-deep: #EDE4D2;
+    --cream-warm: #E8DCC4;
+    --ink: #1A1612;
+    --ink-soft: #2D2620;
+    --ink-mute: #6B5F50;
+    --rust: #A8421C;
+    --rust-deep: #8B3414;
+    --line: rgba(26, 22, 18, 0.18);
+    --line-soft: rgba(26, 22, 18, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Geist', sans-serif;
+    font-size: 19px;
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(26, 22, 18, 0.015) 1px, transparent 1px),
+      radial-gradient(circle at 80% 70%, rgba(26, 22, 18, 0.015) 1px, transparent 1px);
+    background-size: 50px 50px, 80px 80px;
+  }
+
+  /* Subtle paper grain */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1, 0 0 0 0 0.08, 0 0 0 0 0.07, 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+  }
+
+  /* === HERO === */
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 32px 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Instrument Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 11px;
+    color: var(--rust);
+    font-weight: 600;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-eyebrow::before,
+  .hero-eyebrow::after {
+    content: '';
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: var(--rust);
+    opacity: 0.5;
+  }
+  .hero-eyebrow {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(38px, 6.2vw, 86px);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    text-align: center;
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--rust);
+  }
+
+  .hero-sub {
+    font-family: 'Geist', sans-serif;
+    font-size: clamp(18px, 1.6vw, 22px);
+    line-height: 1.5;
+    text-align: center;
+    max-width: 720px;
+    margin: 36px auto 0;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* === HERO IMAGE === */
+  .hero-image {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-img,
+  .break-img,
+  .twocol-img,
+  .break-narrow-img,
+  .product-img {
+    border-radius: 25px;
+    box-shadow: 0 10px 25px 4px rgba(0, 0, 0, 0.25);
+  }
+  .hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .break-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .twocol-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+  }
+  .break-narrow-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+  }
+  .product-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* === MAIN ARTICLE === */
+  .article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 100px 32px 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .byline {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ink-mute);
+    margin-bottom: 60px;
+    text-align: center;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+  }
+  .byline span { color: var(--ink); font-weight: 600; }
+
+  .article p {
+    margin-bottom: 1.4em;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .article p.lede {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+
+  .article p strong {
+    font-weight: 400;
+    color: var(--ink-soft);
+  }
+
+  .article p em {
+    font-style: italic;
+  }
+
+  .article h2 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(30px, 3.6vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 80px 0 36px;
+    color: var(--ink);
+  }
+  .article h2 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--rust);
+  }
+
+  /* === PULL QUOTES === */
+  .pullquote {
+    margin: 56px -40px;
+    padding: 40px 60px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+    position: relative;
+  }
+  .pullquote p {
+    font-family: 'Instrument Sans', sans-serif !important;
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    font-weight: 500 !important;
+    font-style: italic;
+    color: var(--ink) !important;
+    margin: 0 !important;
+  }
+
+  /* === FULL-WIDTH IMAGE BREAK === */
+  .image-break {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .image-break-narrow {
+    max-width: 720px;
+    margin: 60px auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* === TWO COLUMN ASIDE === */
+  .twocol {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .twocol-text h3 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+  .twocol-text h3 em { color: var(--rust); font-style: italic; }
+  .twocol-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 1em;
+  }
+
+  /* === NUMBERED MECHANISM CARDS === */
+  .mechanism {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .mechanism-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+  }
+  .mechanism-item {
+    padding: 40px 32px;
+    position: relative;
+  }
+  .mechanism-num {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--rust);
+    margin-bottom: 16px;
+  }
+  .mechanism-item h4 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+  .mechanism-item p {
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  /* === PRODUCT REVEAL === */
+  .product-reveal {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 100px 32px;
+    margin: 100px 0;
+    position: relative;
+    z-index: 2;
+  }
+  .product-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .product-eyebrow {
+    font-family: 'Instrument Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 11px;
+    color: rgba(245, 239, 226, 0.6);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .product-reveal h2 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: clamp(40px, 5.5vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    margin-bottom: 32px;
+    color: var(--cream);
+    max-width: 850px;
+  }
+  .product-reveal h2 em {
+    font-style: italic;
+    color: var(--cream-warm);
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-top: 60px;
+  }
+  .product-copy p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: rgba(245, 239, 226, 0.85);
+    margin-bottom: 1.2em;
+  }
+  .product-copy p strong { color: rgba(245, 239, 226, 0.85); font-weight: 400; }
+
+  /* === CONTENTS LIST === */
+  .contents {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .contents-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .contents-eyebrow {
+    font-family: 'Instrument Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 11px;
+    color: var(--rust);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .contents h2 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+  }
+  .contents h2 em { font-style: italic; color: var(--rust); }
+
+  .contents-list {
+    display: grid;
+    gap: 0;
+    margin-top: 40px;
+  }
+  .contents-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    gap: 40px;
+    padding: 32px 24px;
+    border-top: 1px solid var(--line);
+    align-items: start;
+  }
+  .contents-item:last-child { border-bottom: 1px solid var(--line); }
+
+  .contents-num {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--rust);
+    line-height: 1;
+  }
+  .contents-title {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .contents-desc {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  /* === GUARANTEE STAMP === */
+  .guarantee {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 60px 32px;
+    text-align: center;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 50px;
+    align-items: center;
+    text-align: left;
+  }
+  .guarantee-stamp {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--rust);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--rust);
+    font-family: 'Instrument Sans', sans-serif;
+    text-align: center;
+    transform: rotate(-6deg);
+    position: relative;
+  }
+  .guarantee-stamp::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid var(--rust);
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+  .guarantee-stamp-num {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1;
+    font-style: italic;
+  }
+  .guarantee-stamp-text {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  .guarantee-stamp-sub {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 4px;
+    color: var(--ink-mute);
+  }
+  .guarantee h3 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+  .guarantee p {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-bottom: 0.8em;
+  }
+
+  /* === IMAGINE GRID === */
+  .imagine {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .imagine-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .imagine h2 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+  }
+  .imagine h2 em { font-style: italic; color: var(--rust); }
+  .imagine-intro {
+    max-width: 640px;
+    margin: 24px auto 0;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .imagine-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+  }
+  .imagine-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+  }
+  .imagine-num {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--rust);
+    line-height: 1;
+  }
+  .imagine-text {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .imagine-text em { font-style: italic; }
+
+  /* === BIG CTA === */
+  .cta-block {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 0 32px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  .cta-eyebrow {
+    font-family: 'Instrument Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 11px;
+    color: var(--rust);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .cta-block h2 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(36px, 4.5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    margin-bottom: 24px;
+  }
+  .cta-block h2 em { font-style: italic; color: var(--rust); }
+  .cta-price {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 30px 0 16px;
+    letter-spacing: -0.03em;
+  }
+  .cta-price-sub {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-mute);
+    margin-bottom: 32px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 22px 56px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--ink);
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+  .cta-button:hover {
+    background: var(--rust);
+    border-color: var(--rust);
+    transform: translateY(-1px);
+  }
+  .cta-meta {
+    margin-top: 24px;
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-mute);
+  }
+
+  /* === FAQ === */
+  .faq {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .faq-header { text-align: center; margin-bottom: 60px; }
+  .faq h2 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+  .faq h2 em { font-style: italic; color: var(--rust); }
+  details {
+    border-top: 1px solid var(--line);
+    padding: 24px 0;
+  }
+  details:last-of-type { border-bottom: 1px solid var(--line); }
+  summary {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.3;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    letter-spacing: -0.01em;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+';
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--rust);
+    line-height: 0.7;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  details[open] summary::after {
+    transform: rotate(45deg);
+  }
+  details p {
+    margin-top: 18px;
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+
+  /* === FOOTER === */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 50px 32px;
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+    z-index: 2;
+    background: var(--cream-deep);
+  }
+  footer .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .footer-logo {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .footer-meta {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ink-mute);
+    margin-bottom: 24px;
+  }
+  .footer-fine {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink-mute);
+    max-width: 640px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+  .footer-support {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-mute);
+    font-style: italic;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-support a {
+    color: var(--rust);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(168, 66, 28, 0.3);
+    transition: border-color 0.2s ease;
+  }
+  .footer-support a:hover {
+    border-bottom-color: var(--rust);
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 900px) {
+    .mechanism-grid { grid-template-columns: 1fr; }
+    .product-grid { grid-template-columns: 1fr; gap: 40px; }
+    .twocol { grid-template-columns: 1fr; gap: 30px; }
+    .imagine-grid { grid-template-columns: 1fr; gap: 0; }
+    .guarantee { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    .guarantee-stamp { margin: 0 auto; }
+    .contents-item { grid-template-columns: 60px 1fr; gap: 20px; }
+    .contents-desc { grid-column: 1 / -1; padding-left: 80px; }
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    .hero { padding: 50px 22px 40px; }
+    .hero-image, .image-break, .image-break-narrow, .twocol, .mechanism, .contents, .imagine, .cta-block, .faq { padding-left: 22px; padding-right: 22px; }
+    .article { padding: 60px 22px 40px; }
+    .article p { font-size: 20px; }
+    .article p.lede { font-size: 20px; }
+    .pullquote { margin: 40px -22px; padding: 30px 28px; }
+    .pullquote p { font-size: 22px !important; }
+    .product-reveal { padding: 60px 22px; margin: 60px 0; }
+    .contents-item { padding: 24px 0; }
+    .cta-price { font-size: 64px; }
+    .imagine-text { font-size: 18px; }
+    .image-break, .image-break-narrow, .hero-image { margin: 60px 0; }
+  }
+
+  /* === FADE-IN ON SCROLL === */
+  .fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Selection color */
+  ::selection {
+    background: var(--rust);
+    color: var(--cream);
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">A Letter For The Owner Who's Tried Everything</div>
+  <h1>The doorbell rings. Your dog <em>loses their mind.</em><br>Every. Single. Time.</h1>
+  <p class="hero-sub">People walking past. Cars. Bicycles. The postman. The Amazon van on the gravel. The neighbour's dog through the fence. A leaf, sometimes. It doesn't matter what it is, your dog barks at everything. And you are exhausted.</p>
+</section>
+
+<!-- HERO IMAGE -->
+<div class="hero-image">
+  <img src="hero.jpg" alt="A woman in her kitchen, mug in hand, bracing as a white van pulls up outside the window. Her springer spaniel sits at the window watching." class="hero-img">
+</div>
+
+<!-- ARTICLE OPENING -->
+<article class="article">
+
+  <div class="byline">
+    Read time: 9 minutes
+  </div>
+
+  <p class="lede">You hear the van before he does. Only by about a second. You're already bracing.</p>
+
+  <p class="lede">Shoulders up. Mug down. Your Zoom call is about to be ruined. You know it. There's nothing you can do.</p>
+
+  <p class="lede">The van has pulled onto the gravel. The dog has clocked it. The next ninety seconds of your life are not going to be your own.</p>
+
+  <p>He doesn't bark. He <em>explodes.</em></p>
+
+  <p>It's the doorbell. Then the postman. The bin lorry. The bloke walking past with his terrier.</p>
+
+  <p>Then it's nothing. Just a noise from the kitchen.</p>
+
+  <p>And now he's lost it.</p>
+
+  <p>You're standing in your own hallway, saying <em>"shhh"</em> through gritted teeth like an idiot.</p>
+
+  <p>Because what else are you supposed to do.</p>
+
+  <p>By 11am you've already shouted <em>quiet</em> about fourteen times.</p>
+
+  <p>By 3pm your nerves are shredded.</p>
+
+  <p>By the time your husband gets home you've stopped pretending you're fine.</p>
+
+  <div class="pullquote">
+    <p>You don't really live in your own house anymore. You manage it. You scan it. You listen out for it.</p>
+  </div>
+
+  <p>And the worst part, the part you haven't said out loud to anyone, is that you don't really live in your own house anymore.</p>
+
+  <p>You manage it. You scan it. You listen out for it.</p>
+
+  <p>You time the walks for half six in the morning so you don't see another dog.</p>
+
+  <p>You dread the doorbell. You dread the school run.</p>
+
+  <p>You dread the summer because the windows will be open and he'll hear <em>everything</em>.</p>
+
+  <p>You can't relax. Not properly. Not even when it's quiet, because quiet just means the next bark hasn't happened yet.</p>
+
+  <p>If any of that landed, then this letter was written for you.</p>
+
+  <p>What we're about to tell you will sound, at first, like the same thing every dog trainer has told you. Every YouTube video. Every £80-an-hour behaviourist.</p>
+
+  <p>Give us four minutes before you decide.</p>
+
+  <p>Because the reason nothing has worked is not what you think it is.</p>
+
+  <p>It is not that your dog is broken.</p>
+
+  <p>It is not that you got him too late, or socialised him wrong, or "missed the window."</p>
+
+  <p>It is not that he's a rescue. Or a lockdown puppy. Or a spaniel, a collie, a terrier, or whatever else you've been told explains the behaviour.</p>
+
+  <p>It is not that you're a bad owner.</p>
+
+  <p><strong>You are not a bad owner.</strong></p>
+
+  <p>We want that on the page in writing before we go any further.</p>
+
+  <p>Because we know you've thought it.</p>
+
+  <p>The reason nothing has worked is that <strong>every single thing you've tried was deployed at the wrong moment.</strong></p>
+
+  <p>Not the wrong product. The wrong moment.</p>
+
+  <p>Once you understand what's actually happening in his head when the doorbell goes, everything else in this letter will make sense.</p>
+
+  <p>And you'll start to see why fourteen days from now, your house can sound very different.</p>
+
+  <p>Stay with us.</p>
+
+</article>
+
+<!-- IMAGE BREAK: the products that failed -->
+<div class="image-break">
+  <img src="failed-products.jpg" alt="A drawer of failed dog products: an Adaptil diffuser, a ThunderShirt, an anti-bark collar, calming chews, and crumpled trainer notes." class="break-img">
+</div>
+
+<!-- TRIED EVERYTHING SECTION -->
+<article class="article" style="padding-top: 60px;">
+
+  <h2>"I've tried everything."<br><em>Yes. We know.</em> Let us list it for you.</h2>
+
+  <p>If you're like the women we've spent the last few years writing this for, the list looks something like this.</p>
+
+  <p>You tried the <strong>Adaptil diffuser.</strong> You plugged it in for a month. You bought the refills.</p>
+
+  <p>You put one upstairs and one downstairs because you read somewhere that you should.</p>
+
+  <p>It did absolutely nothing.</p>
+
+  <p>There is now a half-used bottle of it on a shelf in the utility room.</p>
+
+  <p>You tried a <strong>ThunderShirt.</strong> It worked for two days.</p>
+
+  <p>By day three he'd figured out it was just a jumper.</p>
+
+  <p>The barking came back exactly as it was.</p>
+
+  <p>You tried an <strong>anti-bark collar.</strong> Maybe vibration. Maybe citronella.</p>
+
+  <p>Maybe, and this is the one you don't tell people about, a low-level shock one that a man on YouTube swore was humane.</p>
+
+  <p>It either terrified him. Or it stopped working when the battery went.</p>
+
+  <p>Or it worked only while he was wearing it, and the second you took it off, he was right back to it.</p>
+
+  <p>You felt sick the whole time it was on him. You took it off.</p>
+
+  <p>It's in a drawer.</p>
+
+  <p>You paid for a <strong>trainer.</strong> £70, £80 a session. They came round. They were lovely. They showed you some things.</p>
+
+  <p>The dog was an angel for the entire hour, because dogs always are when a stranger is in the house.</p>
+
+  <p>The trainer left. You tried the things. The dog reverted within two days. You booked another session. Same thing. You stopped booking.</p>
+
+  <p>You watched <strong>YouTube.</strong> Hours of it. Zak George, Kikopup, the lot.</p>
+
+  <p>Some of it made sense.</p>
+
+  <p>None of it told you what to do on a wet Tuesday in February, when your dog has just kicked off at the recycling lorry for the third week running and you have a Teams meeting in eleven minutes.</p>
+
+  <p>You tried <strong>shouting <em>quiet</em>.</strong> It adds noise to the noise. He doesn't even hear you.</p>
+
+  <p>You tried <strong>ignoring it.</strong> He barks for an hour. Sometimes ninety minutes. You give up before he does. You always give up before he does.</p>
+
+  <p>You tried <strong>treats.</strong> You stood at the window with a pocket full of cheese and tried to redirect him.</p>
+
+  <p>He was so far gone he wouldn't even look at the cheese.</p>
+
+  <p>The cheese, you think. That's how bad it is.</p>
+
+  <p>He won't even take cheese.</p>
+
+  <p>You've spent somewhere between £200 and £600 on things that didn't work.</p>
+
+  <p>If you actually add it up. Which you haven't. Because you don't want to.</p>
+
+  <p>On <em>fixing this specific problem</em>, you've quietly poured several hundred quid down the drain.</p>
+
+  <p>And here's what nobody has said to you yet, which is the only thing that matters:</p>
+
+  <div class="pullquote">
+    <p>Every single one of those things failed for the same reason. Not because they were bad products. Because of <em>when</em> they were used.</p>
+  </div>
+
+  <p>Every one of them was deployed <em>after</em> the bark started. After the explosion.</p>
+
+  <p>After your dog had already crossed a line in his own head.</p>
+
+  <p>A line that meant, biologically, chemically, physically, he was no longer capable of learning anything from anyone. Including you.</p>
+
+  <p>You weren't training him.</p>
+
+  <p>You were standing next to him while he trained himself. <strong>In the wrong direction. Hundreds of times a week.</strong></p>
+
+  <p>That's what's actually been happening for the last six months, or the last year, or however long this has been going on.</p>
+
+  <p>And once you see it, you can't un-see it. So let us show you.</p>
+
+</article>
+
+<!-- TWO COL: rehearsal mechanism intro -->
+<div class="twocol">
+  <img src="forest-path.jpg" alt="A winding worn footpath through misty English woodland in autumn light, narrowing into the distance." class="twocol-img">
+  <div class="twocol-text">
+    <h3>Your dog isn't broken.<br><em>He's been practising.</em></h3>
+    <p>There's a thing that happens in a dog's brain. In any brain. Including yours and ours.</p>
+    <p>It's so straightforward it almost feels too simple to be the answer.</p>
+    <p>It was discovered in 1949 by a Canadian psychologist called Donald Hebb.</p>
+    <p>The rule he wrote down has been in every neuroscience textbook since.</p>
+    <p><strong>Neurons that fire together, wire together.</strong></p>
+    <p>In plain English: every time your dog does something, the pathway in his brain that produced that behaviour gets a tiny bit thicker.</p>
+    <p>A tiny bit faster. A tiny bit more automatic.</p>
+  </div>
+</div>
+
+<!-- ARTICLE CONTINUES -->
+<article class="article">
+
+  <p>Pat Miller, in <em>Whole Dog Journal</em>, describes it like a forest path.</p>
+
+  <p>The first time your dog hears the doorbell and barks at it, the path is faint. Just trodden grass.</p>
+
+  <p>The second time, it's a little clearer.</p>
+
+  <p>By the hundredth time, it's a footpath.</p>
+
+  <p>By the thousandth, it's a motorway.</p>
+
+  <p>He doesn't think about taking it. He just <em>does</em>.</p>
+
+  <p>If your dog has been barking at the postman daily for six months, that's roughly 180 repetitions.</p>
+
+  <p><strong>He has practised barking at the postman one hundred and eighty times.</strong></p>
+
+  <p>No half-hour training session is going to outrun that.</p>
+
+  <p>No collar, no diffuser, no shouted <em>quiet</em> is going to outrun that.</p>
+
+  <p>The pathway is a motorway. The motorway is the problem.</p>
+
+  <p>And here's the part that breaks people's hearts a bit when they finally hear it.</p>
+
+  <p><strong>Every time he barks at a trigger and the trigger goes away, your dog's brain logs a win.</strong></p>
+
+  <p>The postman leaves. The van drives off. The man with the dog walks past.</p>
+
+  <p><em>I barked. The threat went. Barking works.</em></p>
+
+  <p>The pathway thickens again.</p>
+
+  <p>He has just trained himself, in real time, in your hallway, that the correct response to a doorbell is the response he just gave.</p>
+
+  <p>He isn't being naughty. He isn't being disobedient.</p>
+
+  <p>He is doing the most natural thing in the world, which is repeating the behaviour his brain keeps telling him is succeeding.</p>
+
+  <p>That's the rehearsal loop. And it explains, completely, why every product you tried did nothing.</p>
+
+</article>
+
+<!-- THREE-COLUMN: WHY EACH FAILED -->
+<div class="mechanism">
+  <div class="mechanism-grid">
+    <div class="mechanism-item">
+      <div class="mechanism-num">I.</div>
+      <h4>The collar</h4>
+      <p>Interrupted the bark but didn't touch the pathway.</p>
+      <p>Take it off and the motorway is still there.</p>
+    </div>
+    <div class="mechanism-item">
+      <div class="mechanism-num">II.</div>
+      <h4>The diffuser</h4>
+      <p>Lowered general anxiety a fraction but cannot rewire an established trigger response.</p>
+      <p>Diffusers don't do that. Nothing sold in a chemist's does.</p>
+    </div>
+    <div class="mechanism-item">
+      <div class="mechanism-num">III.</div>
+      <h4>The trainer</h4>
+      <p>Taught you the right things.</p>
+      <p>But couldn't be there at 11am on a Tuesday when the postman actually came.</p>
+    </div>
+    <div class="mechanism-item">
+      <div class="mechanism-num">IV.</div>
+      <h4>Shouting <em>quiet</em></h4>
+      <p>Adds more arousal to a nervous system that's already flooded.</p>
+      <p>Two of you barking instead of one.</p>
+    </div>
+    <div class="mechanism-item">
+      <div class="mechanism-num">V.</div>
+      <h4>Ignoring it</h4>
+      <p>Works for a dog asking for attention.</p>
+      <p>Does nothing for a dog whose own bark is internally rewarding him.</p>
+    </div>
+    <div class="mechanism-item">
+      <div class="mechanism-num">VI.</div>
+      <h4>The treats</h4>
+      <p>Didn't work because of the <em>other</em> thing happening in his head.</p>
+      <p>The part most owners never get told.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE: PANIC LINE -->
+<article class="article">
+  <h2>Your dog has a ceiling.<br>Below it, he can think. <em>Above it, he can't.</em></h2>
+
+  <p>Every dog has a stress threshold. A line in their nervous system.</p>
+
+  <p>The moment it's crossed, the thinking part of the brain switches off. The panic part takes over.</p>
+
+  <p>Behaviourists call it the panic line.</p>
+
+  <p>Below it, your dog can hear you. Take a treat. Learn something. Make a different choice.</p>
+
+  <p>Above it, the amygdala has hijacked the wheel. The rational part of his brain, the part that <em>could</em> learn, is no longer driving.</p>
+
+  <p>This is why the cheese didn't work.</p>
+
+  <p>He wasn't refusing it. He <em>physically couldn't take it.</em></p>
+
+  <p>His brain had flooded with stress hormones.</p>
+
+  <p>The systems that handle "should I take this food" had been switched off, in favour of the systems that handle "is this thing going to kill me."</p>
+
+  <p>You weren't standing next to a stubborn dog. You were standing next to a dog whose nervous system had gone into red alert.</p>
+
+  <p>And here's the chemistry bit, because it matters.</p>
+
+  <p>When a dog goes over the panic line, his brain dumps cortisol into his bloodstream within about fifteen minutes.</p>
+
+  <p>Cortisol is a stress hormone. Useful in short bursts, ruinous in sustained ones.</p>
+
+  <p>It takes between <strong>24 and 72 hours</strong> to fully clear his system.</p>
+
+  <p>Read that again, because it changes everything.</p>
+
+  <div class="pullquote">
+    <p>The bark you witnessed this morning may have been powered by stress chemistry from Tuesday's Amazon van.</p>
+  </div>
+
+  <p>Which means every time you've tried to "correct" his behaviour during or after a bark, you've been trying to teach a dog whose brain was chemically incapable of learning.</p>
+
+  <p>You've been shouting at the storm.</p>
+
+  <p><strong>The storm doesn't hear you. The storm has its own weather.</strong></p>
+
+  <p>This is why the trainer's advice "evaporated the minute they left."</p>
+
+  <p>Not because the trainer was wrong.</p>
+
+  <p>Because the trainer worked with your dog in the calm of a one-to-one session. Below the line. Where learning is possible.</p>
+
+  <p>And then the postman came at 11am the next day. Your dog was straight back over the line. Where none of it could land.</p>
+
+  <p>You haven't been failing.</p>
+
+  <p>You've been trying to train above the panic line.</p>
+
+  <p><strong>Nobody told you there was a line.</strong></p>
+
+  <p>Nobody told you it had to be done below it.</p>
+
+  <p>Nobody told you that the bark itself, once it had happened, was the rehearsal that made the next one more likely.</p>
+
+  <p>So: the motorway is the problem. The cortisol is the problem. The line is the problem.</p>
+
+  <p>What's the answer.</p>
+
+</article>
+
+<!-- IMAGE BREAK -->
+<div class="image-break-narrow">
+  <img src="calm-dog.jpg" alt="A golden cocker spaniel lying calm and settled on a cream cushion in soft natural window light." class="break-narrow-img">
+</div>
+
+<article class="article" style="padding-top: 40px;">
+
+  <h2>What if you <em>never tried to stop the bark</em> at all?</h2>
+
+  <p>Here's the bit nobody has told you, and it's the bit that changes everything.</p>
+
+  <p>You don't fix this by suppressing the bark.</p>
+
+  <p>You don't fix it by punishing him for barking.</p>
+
+  <p>You don't fix it by waiting for the bark to happen and then doing the right thing afterwards.</p>
+
+  <p><strong>You fix it by doing your work in the calm.</strong></p>
+
+  <p>Below the line.</p>
+
+  <p>Before the trigger ever crosses the threshold.</p>
+
+  <p>With the dog's brain in the state where it can actually learn.</p>
+
+  <p>You grow a new path through the forest, parallel to the motorway.</p>
+
+  <p>You walk it once, then twice, then a hundred times.</p>
+
+  <p>You feed it, while you let the motorway quietly overgrow.</p>
+
+  <p>After two weeks of this, done correctly, in short specific bursts, the new path has become the path of least resistance.</p>
+
+  <p>The doorbell rings, and his brain takes the new path because the new path is now the easier route.</p>
+
+  <p>He doesn't think about it. He just <em>does</em>.</p>
+
+  <p>The bark you've been hearing for a year is not a personality. It's a habit.</p>
+
+  <p><strong>Habits run on neural pathways. Pathways can be re-routed.</strong></p>
+
+  <p>The science of how to do this has existed since 1947.</p>
+
+  <p>It was first worked out in 1947 by a South African psychiatrist called Joseph Wolpe.</p>
+
+  <p>He treated terrified cats by feeding them food at progressively closer distances to the thing that scared them.</p>
+
+  <p>He published a 90% success rate in peer-reviewed literature.</p>
+
+  <p>The method he invented is called <strong>systematic desensitisation paired with counter-conditioning.</strong></p>
+
+  <p>It is now the gold standard endorsed by the American Veterinary Society of Animal Behavior.</p>
+
+  <p>It is used by Guide Dogs UK to prepare working dogs for life on a London pavement.</p>
+
+  <p>It is used by military working dog handlers to teach dogs to stay calm under live gunfire.</p>
+
+  <p>The same protocol that produces a guide dog who can sleep through Oxford Circus rush hour is the protocol that, scaled down to a kitchen and a phone speaker, will produce a dog who hears the doorbell and looks at you instead of exploding.</p>
+
+  <p>Veterinary behaviourists charge £150 an hour to teach this. The science is settled. It has been settled for nearly eighty years.</p>
+
+  <p>What's been missing, and this is the actual bottleneck, is a plan a normal person can follow on a Tuesday evening.</p>
+
+  <p>Alone, on the sofa, after work, without a trainer in the room.</p>
+
+  <p><strong>That's what we built.</strong></p>
+
+</article>
+
+<!-- PRODUCT REVEAL -->
+<section class="product-reveal">
+  <div class="product-inner">
+    <div class="product-eyebrow">Introducing</div>
+    <h2>The Quiet House Method.<br><em>A 14-day plan, in plain English.</em></h2>
+
+    <div class="product-grid">
+      <div class="product-image">
+        <img src="product-mockup.jpg" alt="The Quiet House Method PDF cover shown on an iPad. Cream cover with serif typography reading 'The Quiet House Method, a 14-day plan for dogs who bark at everything. Force-free. Science-backed. Fifteen minutes a day.'" class="product-img">
+      </div>
+      <div class="product-copy">
+        <p>The Quiet House Method is a 14-day, day-by-day plan.</p>
+
+        <p>It takes the protocol used by guide dog organisations and veterinary behaviourists.</p>
+
+        <p>And translates it into something you can actually do.</p>
+
+        <p>In your own kitchen. With your own dog. Using your phone and a packet of high-value treats.</p>
+
+        <p>It's a PDF. It's instant. It costs <strong>£10.</strong></p>
+
+        <p>It is, deliberately, not a course.</p>
+
+        <p>Not a video library. Not a subscription.</p>
+
+        <p>Not 400 pages of "why dogs bark" theory you already know.</p>
+
+        <p>It's a tight, focused, day-by-day plan. Thirty to fifty pages, depending on how you count.</p>
+
+        <p>You can read it in one sitting. Execute it over fourteen days.</p>
+
+        <p><strong>Fifteen minutes a day.</strong> That's the entire ask.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENTS -->
+<section class="contents">
+  <div class="contents-header">
+    <div class="contents-eyebrow">What's inside</div>
+    <h2>The day-by-day, <em>without the fluff.</em></h2>
+  </div>
+
+  <div class="contents-list">
+    <div class="contents-item">
+      <div class="contents-num">I.</div>
+      <div class="contents-title">The Bark Trigger Map</div>
+      <div class="contents-desc">Before you do a single thing, you map your dog's specific triggers in priority order. Not generic. Yours.<br><br>The map tells you which to start with on day one and which to leave for week two.</div>
+    </div>
+    <div class="contents-item">
+      <div class="contents-num">II.</div>
+      <div class="contents-title">Days 1–3: The Doorbell &amp; Sound Protocol</div>
+      <div class="contents-desc">Using a recording on your phone played at sub-threshold volume, you pair the sound with a high-value reward on a precise timing protocol.<br><br>By day three, the sound that used to launch him is the sound that makes him look at you for cheese.</div>
+    </div>
+    <div class="contents-item">
+      <div class="contents-num">III.</div>
+      <div class="contents-title">Days 4–7: Window &amp; Outdoor Triggers</div>
+      <div class="contents-desc">Same principle, scaled to the things he sees rather than hears. The walker on the pavement. The fox in the garden.<br><br>Includes the window-film trick almost no owner thinks of, which alone gives most dogs their first quiet morning in months.</div>
+    </div>
+    <div class="contents-item">
+      <div class="contents-num">IV.</div>
+      <div class="contents-title">Days 8–10: The Place Command</div>
+      <div class="contents-desc">The new path through the forest.<br><br>A single, automatic response to triggers that becomes the path his brain takes by default.<br><br>The bark doesn't get suppressed. It gets <em>replaced</em>.</div>
+    </div>
+    <div class="contents-item">
+      <div class="contents-num">V.</div>
+      <div class="contents-title">Days 11–14: Real-World Testing</div>
+      <div class="contents-desc">You stress-test the new pathway against real triggers. Real doorbell, real postman, real walks.<br><br>By this point most owners are watching their dog do something they thought wasn't possible four weeks earlier.</div>
+    </div>
+    <div class="contents-item">
+      <div class="contents-num">VI.</div>
+      <div class="contents-title">The Management Checklist</div>
+      <div class="contents-desc">The damage control you put in place on day one, so that while the rewiring happens you're not still racking up rehearsals every time the postman comes.<br><br>The thing every trainer should give you, and almost none do.</div>
+    </div>
+    <div class="contents-item">
+      <div class="contents-num">VII.</div>
+      <div class="contents-title">The Daily Bark Log</div>
+      <div class="contents-desc">A one-minute-a-day tracker that does something quietly extraordinary. It shows you the numbers dropping in real time.<br><br>Most owners cry the first time they look back at week one's numbers from week two.</div>
+    </div>
+    <div class="contents-item">
+      <div class="contents-num">VIII.</div>
+      <div class="contents-title">The High-Value Treat Guide</div>
+      <div class="contents-desc">The specific, ranked list of what actually works above and below threshold.<br><br>The cheese from the fridge that didn't work in the hallway is not the same as the food that <em>will</em> work.<br><br>The difference matters more than anyone has told you.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA INTERRUPT 1 -->
+<section class="cta-block">
+  <div class="cta-eyebrow">Get the full plan</div>
+  <h2>The Quiet House Method.<br><em>£10. Instant download.</em></h2>
+  <a href="#buy" class="cta-button">Get The Quiet House Method</a>
+  <div class="cta-meta">30-day money-back guarantee · No subscription · No upsells</div>
+</section>
+
+<!-- WHY £10 -->
+<article class="article">
+  <h2>Why £10.</h2>
+
+  <p>We want to be straight with you about the price. Because we know what you're thinking.</p>
+
+  <p>£10 is not a discount.</p>
+
+  <p>There is no fake £97 it's been "marked down" from. There is no countdown timer about to expire.</p>
+
+  <p>£10 is the actual price.</p>
+
+  <p>And it is the actual price for two specific reasons.</p>
+
+  <p><strong>The first:</strong> at £10, you don't need to ask anyone.</p>
+
+  <p>You don't need to justify it. You don't need a partner conversation.</p>
+
+  <p>It's the cost of two coffees and a sandwich.</p>
+
+  <p>If it works, it has paid for itself before lunchtime on day one.</p>
+
+  <p>If it doesn't, you've lost less than the Adaptil refills you bought in March.</p>
+
+  <p><strong>The second:</strong> we priced it deliberately at the level Patricia McConnell's booklets sit at.</p>
+
+  <p>The books trusted by behaviourists across the UK.</p>
+
+  <p>Sold by the tens of thousands at exactly this price point.</p>
+
+  <p>None of them dressed up as a £400 course.</p>
+
+  <p>£10 is the credibility zone.</p>
+
+  <p>Cheaper than this and you'd assume it was junk. More than this and you'd, rightly, be wary.</p>
+
+  <p>You have already spent, on conservative estimate, between £200 and £600 trying to fix this.</p>
+
+  <p>You have spent £80 on a single trainer session that gave you advice that didn't survive contact with your hallway.</p>
+
+  <p>You have plugged in diffusers. You have bought collars you now feel guilty about.</p>
+
+  <p>You have, between one thing and another, almost certainly spent more on this problem than you've spent on Christmas.</p>
+
+  <div class="pullquote">
+    <p>The £10 is not the investment. The £10 is the smallest, last, lowest-risk thing you will ever try.</p>
+  </div>
+
+</article>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="guarantee-stamp">
+    <div class="guarantee-stamp-num">30</div>
+    <div class="guarantee-stamp-text">Day Refund</div>
+    <div class="guarantee-stamp-sub">No Questions</div>
+  </div>
+  <div>
+    <h3>The thirty-day, <em>no-questions</em> guarantee.</h3>
+    <p>Buy The Quiet House Method today. Read it tonight. Run the day one and day two protocols this week. If by the end of thirty days (that's sixteen days <em>after</em> the plan finishes), you don't think it was worth ten quid, email us.</p>
+    <p>One sentence. No form, no hoops, no "tell us why." You get every penny back. You keep the PDF.</p>
+    <p style="font-style: italic; color: var(--ink-mute); font-size: 15px; margin-top: 1em;">The risk is not £10. The risk is doing nothing and finding yourself, on the last Tuesday in October, having had another six months of the same.</p>
+  </div>
+</section>
+
+<!-- IMAGINE -->
+<section class="imagine">
+  <div class="imagine-header">
+    <h2>Imagine fourteen days <em>from now.</em></h2>
+    <p class="imagine-intro">Not a perfect dog. We're not going to promise you that. You don't <em>want</em> a silent dog. A quick alert bark when someone's at the door is what a dog is for. You want one bark, then quiet.</p>
+  </div>
+
+  <div class="imagine-grid">
+    <div class="imagine-item">
+      <div class="imagine-num">I.</div>
+      <div class="imagine-text">The doorbell going while you're on a Zoom call, and your dog lifting his head, and lying back down.</div>
+    </div>
+    <div class="imagine-item">
+      <div class="imagine-num">II.</div>
+      <div class="imagine-text">A friend coming over for a cup of tea and you not having to apologise at the door.</div>
+    </div>
+    <div class="imagine-item">
+      <div class="imagine-num">III.</div>
+      <div class="imagine-text">The Amazon van pulling onto the gravel and the only thing that happens is the parcel landing on the mat.</div>
+    </div>
+    <div class="imagine-item">
+      <div class="imagine-num">IV.</div>
+      <div class="imagine-text">The lie-in until eight thirty.</div>
+    </div>
+    <div class="imagine-item">
+      <div class="imagine-num">V.</div>
+      <div class="imagine-text">A walk in daylight, in the park, like a normal person, instead of timing it for half six in the morning to dodge other dogs.</div>
+    </div>
+    <div class="imagine-item">
+      <div class="imagine-num">VI.</div>
+      <div class="imagine-text">Looking at your dog, your dog, the dog you love to the bones, and feeling, for the first time in months, like the relationship is yours again.</div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE BREAK -->
+<div class="image-break">
+  <img src="quiet-house.jpg" alt="A quiet kitchen scene with morning light. A steaming mug of tea on a wooden table next to an iPad showing The Quiet House Method cover. A golden retriever lies relaxed on the rug near the back door." class="break-img">
+</div>
+
+<!-- BIG CTA -->
+<section class="cta-block" id="buy">
+  <div class="cta-eyebrow">Start Tonight</div>
+  <h2>Get The Quiet House Method.</h2>
+  <div class="cta-price">£10</div>
+  <div class="cta-price-sub">Instant PDF download · 30-day money-back guarantee</div>
+  <a href="#" class="cta-button">Buy Now · £10</a>
+  <div class="cta-meta">No subscription. No upsells. No countdown timer.</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-header">
+    <h2>Still not sure? <em>Let us clear it up.</em></h2>
+  </div>
+
+  <details>
+    <summary>I've tried everything. Why is this different?</summary>
+    <p>Because every other thing you tried was deployed <em>after</em> the bark, <em>above</em> the panic line, where your dog could not learn. This is the only protocol that works in the ten quiet minutes a day when his brain is actually capable of rewiring. Same science used by Guide Dogs UK. Different deployment.</p>
+  </details>
+
+  <details>
+    <summary>My dog is too far gone. He's been like this for years.</summary>
+    <p>Hebbian learning works in both directions.</p>
+
+    <p>The motorway took six months to wear in. The new path doesn't take six months to grow. It takes about ten days of consistent below-threshold work.</p>
+
+    <p>The brain is far better at building new pathways than maintaining old ones it's no longer using.</p>
+
+    <p>Older dogs do this just as well as younger ones. The plan works on dogs from six months upwards, including rescues with unknown histories.</p>
+  </details>
+
+  <details>
+    <summary>My dog isn't food-motivated. He won't take treats when he's barking.</summary>
+    <p>Correct, and that is exactly what the panic-line section of this letter explained. The Method does not ask him to take food while he's flooded. It works <em>below</em> the threshold, in the calm, where his appetite is online. The High-Value Treat Guide tells you what works for dogs who normally turn their nose up at the stuff in your treat bag. This is solved.</p>
+  </details>
+
+  <details>
+    <summary>It's only £10. Can it actually be any good?</summary>
+    <p>£10 is the same price McConnell sells <em>The Cautious Canine</em> at: read by 80,000+ owners, prescribed by behaviourists across the UK. You have been conditioned to believe that good things cost a lot. Sometimes they do. Sometimes the cheaper thing is just better-targeted.</p>
+  </details>
+
+  <details>
+    <summary>Who wrote this? Are they actually qualified?</summary>
+    <p>The protocol inside The Quiet House Method is not ours. We didn't invent it.</p>
+
+    <p>It was invented by Joseph Wolpe in 1947, and refined over seventy-eight years by veterinary behaviourists, applied animal behaviour researchers, and the trainers at Guide Dogs UK.</p>
+
+    <p>What we've done is translate it. Cleanly, plainly, day by day, into something you can do without a trainer present.</p>
+
+    <p>The science is borrowed from the best people on earth. The plan is ours.</p>
+  </details>
+
+  <details>
+    <summary>What if I get to day five and it isn't working?</summary>
+    <p>Email us. We read every email. We'll tell you what to adjust. And if it's still not working at day thirty, you get your money back.</p>
+  </details>
+</section>
+
+<!-- CLOSE -->
+<article class="article">
+  <h2>One last thing, <em>then we'll let you go.</em></h2>
+
+  <p>We know you've been here before.</p>
+
+  <p>We know you've read pages like this and felt a flicker of hope and bought the thing and waited and watched it fail.</p>
+
+  <p>We know that what you're feeling, right now, is partly <em>maybe</em> and partly <em>here we go again</em>.</p>
+
+  <p>We want to say this clearly.</p>
+
+  <p>The reason every other thing failed is now sitting in your head, named.</p>
+
+  <p><strong>The rehearsal loop. The panic line. The cortisol window.</strong></p>
+
+  <p>You can't un-know it.</p>
+
+  <p>Even if you don't buy this, you now understand why the collar didn't work, why the trainer didn't stick, why the diffuser did nothing.</p>
+
+  <p>You can never again be sold a product that ignores those three things.</p>
+
+  <p>The Quiet House Method is the cheapest, fastest, lowest-risk way we know to apply that understanding to your actual dog, in your actual house.</p>
+
+  <p>Starting tonight.</p>
+
+  <p>It costs less than the Adaptil refills.</p>
+
+  <p>It comes with a thirty-day, full-refund, no-questions guarantee.</p>
+
+  <p>It will take you fifteen minutes a day for two weeks.</p>
+
+  <p>And on day six or day seven, the doorbell will ring.</p>
+
+  <p>Your dog will look at you instead of exploding.</p>
+
+  <p>And you will probably cry.</p>
+
+  <p>Most owners do. They send us messages about it.</p>
+
+  <p><em>"He just looked at me. He's never just looked at me before."</em></p>
+
+  <p><strong>That's the moment we built this for.</strong></p>
+
+  <p>That's the moment we want for you.</p>
+</article>
+
+<!-- FINAL CTA -->
+<section class="cta-block">
+  <div class="cta-eyebrow">Last call</div>
+  <h2>The Quiet House Method.</h2>
+  <div class="cta-price">£10</div>
+  <div class="cta-price-sub">Instant PDF download · Read it tonight · Start tomorrow</div>
+  <a href="#" class="cta-button">Get The Quiet House Method</a>
+  <div class="cta-meta">30-day money-back guarantee · No subscription</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">The Quiet House Method</div>
+    <div class="footer-meta">A 14-Day Plan</div>
+    <div class="footer-fine">Force-free. Science-backed. Made in the UK for British dog owners and their barking-at-everything dogs. The science behind The Quiet House Method is endorsed by the American Veterinary Society of Animal Behavior and used daily by Guide Dogs UK and veterinary behaviourists across the country.</div>
+    <div class="footer-support">Questions? Email <a href="mailto:tom@tlmstrive.com">tom@tlmstrive.com</a></div>
+  </div>
+</footer>
+
+<script>
+  // Subtle fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.image-break, .image-break-narrow, .twocol, .mechanism, .pullquote, .imagine, .guarantee, .product-reveal, .contents').forEach(el => {
+    el.classList.add('fade');
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
